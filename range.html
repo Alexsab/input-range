@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>range</title>
+    
+    <!-- <link rel="stylesheet" href="./css/blocks.css" type="text/css" media="all" /> -->
+    <link rel="stylesheet" href="./range.css">
+    
+    <script src="https://static.tildacdn.com/js/jquery-1.10.2.min.js"></script>
+    <script src="./range.js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        try {
+            setTimeout(function() {
+                input_range_init('.forma', '.polzunok', 0, 123900, 5000);
+            }, 500);
+        } catch (err) {};
+    });
+    </script>
+    
+	
+	<style>
+
+	.t-col { display: block; margin: 100px auto; width: 90%; }
+
+	.t-descr { font-family: Arial,sans-serif; font-weight: 300; color: #000000; font-size: 12px; }
+
+	</style>
+
+</head>
+
+<body>
+
+<form class="forma t-col">
+        
+    <div class="polzunok" data-input-lid="polzunok">
+        <div class="range__wrapper">
+            <input name="peremennaya" class="range" type="range" min="0" max="100" data-realMax="99" step="5" value="50">
+            <div class="range__value-txt t-descr" style="display: none;"></div>
+            <div class="range__interval-txt-wrapper">
+                <div class="range__interval-txt range__interval-txt_min t-descr">0</div>
+                <div class="range__interval-txt range__interval-txt_max t-descr">123900</div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+</body>
+
+</html>
